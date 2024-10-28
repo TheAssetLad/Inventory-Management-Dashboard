@@ -1,13 +1,13 @@
-pandas
-plotly
-streamlit
-st-gsheets-connection
-openpyxl
-streamlit_option_menu
-newsapi-python==0.2.7  # Fix: Corrected package name
-requests
-beautifulsoup4
-geopy
-pycountry
-lxml
-
+numpy==1.22.4
+pandas==1.5.3
+plotly==5.22.0
+streamlit==1.32.0
+st-gsheets-connection==0.0.4
+openpyxl==3.1.2
+streamlit_option_menu==0.3.13
+requests==2.31.0
+beautifulsoup4==4.12.3
+geopy==2.4.1
+pycountry==23.12.11
+lxml==5.2.2
+yfinance==0.2.40
