@@ -1,5 +1,9 @@
+[theme]
+base = "light"
+
 [ui]
 hideTopBar=true
+
 [global]
 disableWidgetStateDuplicationWarning = false
 showWarningOnDirectExecution = true
