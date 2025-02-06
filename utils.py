@@ -62,7 +62,7 @@ def format_price_value(data: pd.DataFrame, columns: list):
 
 def format_datetime_column(data: pd.DataFrame, columns: list):
     for i in columns:
-        data[i] = pd.to_datetime(data[i])
+        data[i] = pd.to_datetime(data[i], errors='coerce')
     return data
 
 
