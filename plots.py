@@ -247,7 +247,7 @@ def top_customers(data, location, depot):
 
 def container_prices_and_count(data):
     data['MONTH_YEAR'] = data['DATE'].dt.to_period('M')
-    data = data.groupby(['MONTH_YEAR', 'CITY']).agg({'MARKET_PRICE_USD': "sum",
+    data = data.groupby(['MONTH_YEAR', 'CITY']).agg({'MARKET_PRICE_USD': "mean",
                                                      "CONTAINER_COUNT": "sum"}).reset_index()
     data = data.sort_values(by='MONTH_YEAR')
     data['MONTH_YEAR'] = data['MONTH_YEAR'].dt.strftime('%b %Y')
@@ -275,7 +275,7 @@ def container_prices_and_count(data):
         secondary_y=True
     )
     fig.update_layout(
-        title='Container Prices & Count overtime',
+        title='Avg. Container Prices & Count',
         xaxis_title='Date',
         yaxis_title="Container Prices",
         legend_title="Sales Location",
